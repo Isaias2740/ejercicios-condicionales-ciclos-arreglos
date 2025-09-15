@@ -3,279 +3,645 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ejercicios de Programación – 30 Ejercicios</title>
+<title>30 Ejercicios de Programación</title>
 <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h2 { margin-top: 40px; color: #2c3e50; }
-    .ejercicio { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
-    input, button { margin: 5px 0; padding: 5px; }
-    .resultado { margin-top: 5px; font-weight: bold; color: #e74c3c; }
+  body { font-family: Arial, sans-serif; margin: 20px; }
+  h2 { margin-top: 40px; color: #2c3e50; }
+  .ejercicio { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+  input, button { margin: 5px 0; padding: 5px; }
+  .resultado { margin-top: 5px; font-weight: bold; color: #e74c3c; }
 </style>
 </head>
 <body>
 
 <h1>30 Ejercicios de Condicionales, Ciclos y Arreglos</h1>
 
-<!-- BLOQUE A – Condicionales -->
-<h2>Bloque A – Condicionales (Caso único)</h2>
+<!-- ================== BLOQUE A ================== -->
+<h2>Bloque A – Condicionales</h2>
 
 <div class="ejercicio">
-    <h3>1. Número positivo o negativo</h3>
-    <input type="number" id="A1">
-    <button onclick="A1()">Verificar</button>
-    <div class="resultado" id="resA1"></div>
+  <h3>1. Número positivo o negativo</h3>
+  <input type="number" id="A1">
+  <button onclick="ejercicio1()">Verificar</button>
+  <p class="resultado" id="resA1"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>2. Costo de lápices</h3>
-    <input type="number" id="A2">
-    <button onclick="A2()">Calcular</button>
-    <div class="resultado" id="resA2"></div>
+  <h3>2. Costo de lápices</h3>
+  <input type="number" id="A2">
+  <button onclick="ejercicio2()">Calcular</button>
+  <p class="resultado" id="resA2"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>3. Descuento en trajes</h3>
-    <input type="number" id="A3">
-    <button onclick="A3()">Calcular</button>
-    <div class="resultado" id="resA3"></div>
+  <h3>3. Descuento en trajes</h3>
+  <input type="number" id="A3">
+  <button onclick="ejercicio3()">Calcular</button>
+  <p class="resultado" id="resA3"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>4. Costo de viaje por autobús</h3>
-    <input type="text" id="A4_tipo" placeholder="Tipo A/B/C">
-    <input type="number" id="A4_km" placeholder="Distancia km">
-    <input type="number" id="A4_personas" placeholder="Cantidad de personas">
-    <button onclick="A4()">Calcular</button>
-    <div class="resultado" id="resA4"></div>
+  <h3>4. Costo de viaje por autobús</h3>
+  <input type="text" id="A4_tipo" placeholder="Tipo A/B/C">
+  <input type="number" id="A4_km" placeholder="Km">
+  <input type="number" id="A4_personas" placeholder="Personas">
+  <button onclick="ejercicio4()">Calcular</button>
+  <p class="resultado" id="resA4"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>5. Consultorio médico – costo cita</h3>
-    <input type="number" id="A5_cita">
-    <button onclick="A5()">Calcular</button>
-    <div class="resultado" id="resA5"></div>
+  <h3>5. Consultorio médico</h3>
+  <input type="number" id="A5">
+  <button onclick="ejercicio5()">Calcular</button>
+  <p class="resultado" id="resA5"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>6. Fábrica El Cometa – precio de venta</h3>
-    <input type="number" id="A6_mp" placeholder="Materia prima">
-    <button onclick="A6()">Calcular</button>
-    <div class="resultado" id="resA6"></div>
+  <h3>6. Fábrica El Cometa</h3>
+  <input type="number" id="A6">
+  <button onclick="ejercicio6()">Calcular</button>
+  <p class="resultado" id="resA6"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>7. Banco XYZ – aumento de crédito</h3>
-    <input type="number" id="A7_credito" placeholder="Crédito actual">
-    <input type="number" id="A7_tipo" placeholder="Tipo tarjeta 1–3">
-    <button onclick="A7()">Calcular</button>
-    <div class="resultado" id="resA7"></div>
+  <h3>7. Banco XYZ</h3>
+  <input type="number" id="A7_credito" placeholder="Crédito">
+  <input type="number" id="A7_tipo" placeholder="Tipo 1-3">
+  <button onclick="ejercicio7()">Calcular</button>
+  <p class="resultado" id="resA7"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>8. Paquetería internacional – costo de envío</h3>
-    <input type="number" id="A8_peso" placeholder="Peso kg">
-    <input type="text" id="A8_zona" placeholder="Zona">
-    <button onclick="A8()">Calcular</button>
-    <div class="resultado" id="resA8"></div>
+  <h3>8. Paquetería</h3>
+  <input type="number" id="A8_peso" placeholder="Peso kg">
+  <input type="text" id="A8_zona" placeholder="Zona">
+  <button onclick="ejercicio8()">Calcular</button>
+  <p class="resultado" id="resA8"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>9. Clasificación de edades</h3>
-    <input type="number" id="A9">
-    <button onclick="A9()">Clasificar</button>
-    <div class="resultado" id="resA9"></div>
+  <h3>9. Clasificación de edades</h3>
+  <input type="number" id="A9">
+  <button onclick="ejercicio9()">Clasificar</button>
+  <p class="resultado" id="resA9"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>10. Día de la semana</h3>
-    <input type="number" id="A10">
-    <button onclick="A10()">Mostrar día</button>
-    <div class="resultado" id="resA10"></div>
+  <h3>10. Día de la semana</h3>
+  <input type="number" id="A10">
+  <button onclick="ejercicio10()">Mostrar día</button>
+  <p class="resultado" id="resA10"></p>
 </div>
 
-<!-- BLOQUE B – Ciclos -->
-<h2>Bloque B – Ciclos (N casos)</h2>
+<!-- ================== BLOQUE B ================== -->
+<h2>Bloque B – Ciclos</h2>
 
 <div class="ejercicio">
-    <h3>1. N números positivos o negativos</h3>
-    <input type="text" id="B1" placeholder="Números separados por comas">
-    <button onclick="B1()">Clasificar</button>
-    <div class="resultado" id="resB1"></div>
-</div>
-
-<div class="ejercicio">
-    <h3>2. N compras de lápices</h3>
-    <input type="text" id="B2" placeholder="Cantidades separadas por comas">
-    <button onclick="B2()">Calcular</button>
-    <div class="resultado" id="resB2"></div>
+  <h3>11. N números positivos o negativos</h3>
+  <input type="text" id="B1" placeholder="Ej: 5, -2, 0">
+  <button onclick="ejercicio11()">Clasificar</button>
+  <p class="resultado" id="resB1"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>3. N compras de trajes</h3>
-    <input type="text" id="B3" placeholder="Precios separados por comas">
-    <button onclick="B3()">Calcular</button>
-    <div class="resultado" id="resB3"></div>
+  <h3>12. N compras de lápices</h3>
+  <input type="text" id="B2" placeholder="Ej: 100, 500, 1200">
+  <button onclick="ejercicio12()">Calcular</button>
+  <p class="resultado" id="resB2"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>4. N viajes en autobús</h3>
-    <input type="text" id="B4" placeholder="Formato: Tipo,km,personas; separar por ;">
-    <button onclick="B4()">Calcular</button>
-    <div class="resultado" id="resB4"></div>
+  <h3>13. N compras de trajes</h3>
+  <input type="text" id="B3" placeholder="Ej: 2000, 3000">
+  <button onclick="ejercicio13()">Calcular</button>
+  <p class="resultado" id="resB3"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>5. N pacientes en consultorio</h3>
-    <input type="text" id="B5" placeholder="Número de citas separadas por comas">
-    <button onclick="B5()">Calcular</button>
-    <div class="resultado" id="resB5"></div>
+  <h3>14. N viajes en autobús</h3>
+  <input type="text" id="B4" placeholder="Ej: A,100,10; B,50,30">
+  <button onclick="ejercicio14()">Calcular</button>
+  <p class="resultado" id="resB4"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>6. N artículos de la Fábrica El Cometa</h3>
-    <input type="text" id="B6" placeholder="Formato: mp; separar por comas">
-    <button onclick="B6()">Calcular</button>
-    <div class="resultado" id="resB6"></div>
+  <h3>15. N pacientes en consultorio</h3>
+  <input type="text" id="B5" placeholder="Ej: 1,2,3,4">
+  <button onclick="ejercicio15()">Calcular</button>
+  <p class="resultado" id="resB5"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>7. N clientes del Banco XYZ</h3>
-    <input type="text" id="B7" placeholder="Formato: tipo,credito; separar por ;">
-    <button onclick="B7()">Calcular</button>
-    <div class="resultado" id="resB7"></div>
+  <h3>16. N artículos fábrica</h3>
+  <input type="text" id="B6" placeholder="Ej: 500, 800">
+  <button onclick="ejercicio16()">Calcular</button>
+  <p class="resultado" id="resB6"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>8. N paquetes en paquetería</h3>
-    <input type="text" id="B8" placeholder="Formato: peso,zona; separar por ;">
-    <button onclick="B8()">Calcular</button>
-    <div class="resultado" id="resB8"></div>
+  <h3>17. N clientes banco</h3>
+  <input type="text" id="B7" placeholder="Ej: 1,2000;2,3000">
+  <button onclick="ejercicio17()">Calcular</button>
+  <p class="resultado" id="resB7"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>9. N personas con clasificación de edades</h3>
-    <input type="text" id="B9" placeholder="Edades separadas por comas">
-    <button onclick="B9()">Clasificar</button>
-    <div class="resultado" id="resB9"></div>
+  <h3>18. N paquetes paquetería</h3>
+  <input type="text" id="B8" placeholder="Ej: 2,europa;6,asia">
+  <button onclick="ejercicio18()">Calcular</button>
+  <p class="resultado" id="resB8"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>10. N números → días de la semana</h3>
-    <input type="text" id="B10" placeholder="Números separados por comas">
-    <button onclick="B10()">Mostrar días</button>
-    <div class="resultado" id="resB10"></div>
+  <h3>19. N personas con edades</h3>
+  <input type="text" id="B9" placeholder="Ej: 2, 15, 30, 70">
+  <button onclick="ejercicio19()">Clasificar</button>
+  <p class="resultado" id="resB9"></p>
 </div>
 
-<!-- BLOQUE C – Arreglos -->
+<div class="ejercicio">
+  <h3>20. N números → días</h3>
+  <input type="text" id="B10" placeholder="Ej: 1, 5, 7">
+  <button onclick="ejercicio20()">Mostrar días</button>
+  <p class="resultado" id="resB10"></p>
+</div>
+
+<!-- ================== BLOQUE C ================== -->
 <h2>Bloque C – Arreglos</h2>
 
 <div class="ejercicio">
-    <h3>1. Clasificación de números en arreglo</h3>
-    <input type="text" id="C1" placeholder="Números separados por comas">
-    <button onclick="C1()">Clasificar</button>
-    <div class="resultado" id="resC1"></div>
+  <h3>21. Clasificación de números en arreglo</h3>
+  <input type="text" id="C1" placeholder="Ej: -3, 0, 7">
+  <button onclick="ejercicio21()">Clasificar</button>
+  <p class="resultado" id="resC1"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>2. Costo de pedidos de lápices</h3>
-    <input type="text" id="C2" placeholder="Cantidades separadas por comas">
-    <button onclick="C2()">Calcular</button>
-    <div class="resultado" id="resC2"></div>
+  <h3>22. Pedidos de lápices</h3>
+  <input type="text" id="C2" placeholder="Ej: 500, 1200">
+  <button onclick="ejercicio22()">Calcular</button>
+  <p class="resultado" id="resC2"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>3. Precios de trajes</h3>
-    <input type="text" id="C3" placeholder="Precios separados por comas">
-    <button onclick="C3()">Calcular</button>
-    <div class="resultado" id="resC3"></div>
+  <h3>23. Precios de trajes</h3>
+  <input type="text" id="C3" placeholder="Ej: 2000, 3000">
+  <button onclick="ejercicio23()">Calcular</button>
+  <p class="resultado" id="resC3"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>4. Datos de viajes en arreglo</h3>
-    <input type="text" id="C4" placeholder="Formato: Tipo,km,personas; separar por ;">
-    <button onclick="C4()">Calcular</button>
-    <div class="resultado" id="resC4"></div>
+  <h3>24. Datos de viajes en arreglo</h3>
+  <input type="text" id="C4" placeholder="Ej: A,100,10;C,50,25">
+  <button onclick="ejercicio24()">Calcular</button>
+  <p class="resultado" id="resC4"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>5. Citas médicas en arreglo</h3>
-    <input type="text" id="C5" placeholder="Números de cita separados por comas">
-    <button onclick="C5()">Calcular</button>
-    <div class="resultado" id="resC5"></div>
+  <h3>25. Citas médicas en arreglo</h3>
+  <input type="text" id="C5" placeholder="Ej: 1,2,3,4">
+  <button onclick="ejercicio25()">Calcular</button>
+  <p class="resultado" id="resC5"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>6. Artículos de la fábrica en arreglo</h3>
-    <input type="text" id="C6" placeholder="Materia prima separadas por comas">
-    <button onclick="C6()">Calcular</button>
-    <div class="resultado" id="resC6"></div>
+  <h3>26. Artículos de la fábrica</h3>
+  <input type="text" id="C6" placeholder="Ej: 400, 800">
+  <button onclick="ejercicio26()">Calcular</button>
+  <p class="resultado" id="resC6"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>7. Clientes del banco en arreglo</h3>
-    <input type="text" id="C7" placeholder="Formato: tipo,credito; separar por ;">
-    <button onclick="C7()">Calcular</button>
-    <div class="resultado" id="resC7"></div>
+  <h3>27. Clientes del banco</h3>
+  <input type="text" id="C7" placeholder="Ej: 1,2000;3,5000">
+  <button onclick="ejercicio27()">Calcular</button>
+  <p class="resultado" id="resC7"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>8. Paquetes de paquetería en arreglo</h3>
-    <input type="text" id="C8" placeholder="Formato: peso,zona; separar por ;">
-    <button onclick="C8()">Calcular</button>
-    <div class="resultado" id="resC8"></div>
+  <h3>28. Paquetes en arreglo</h3>
+  <input type="text" id="C8" placeholder="Ej: 2,asia;4,europa">
+  <button onclick="ejercicio28()">Calcular</button>
+  <p class="resultado" id="resC8"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>9. Clasificación de edades en arreglo</h3>
-    <input type="text" id="C9" placeholder="Edades separadas por comas">
-    <button onclick="C9()">Clasificar</button>
-    <div class="resultado" id="resC9"></div>
+  <h3>29. Clasificación de edades en arreglo</h3>
+  <input type="text" id="C9" placeholder="Ej: 5, 12, 20, 65">
+  <button onclick="ejercicio29()">Clasificar</button>
+  <p class="resultado" id="resC9"></p>
 </div>
 
 <div class="ejercicio">
-    <h3>10. Días de la semana en arreglo</h3>
-    <input type="text" id="C10" placeholder="Números separados por comas">
-    <button onclick="C10()">Mostrar días</button>
-    <div class="resultado" id="resC10"></div>
+  <h3>30. Días de la semana en arreglo</h3>
+  <input type="text" id="C10" placeholder="Ej: 1, 4, 7">
+  <button onclick="ejercicio30()">Mostrar días</button>
+  <p class="resultado" id="resC10"></p>
 </div>
 
 <script>
-// ---------- BLOQUE A ----------
-function A1(){let n=parseFloat(document.getElementById('A1').value);document.getElementById('resA1').innerText=n>0?`${n} es positivo`:(n<0?`${n} es negativo`:`${n} es neutro`);}
-function A2(){let c=parseInt(document.getElementById('A2').value);let p=c>=1000?0.85:0.9;document.getElementById('resA2').innerText=`Total a pagar: $${(c*p).toFixed(2)}`;}
-function A3(){let precio=parseFloat(document.getElementById('A3').value);let desc=precio>2500?0.15:0.08;document.getElementById('resA3').innerText=`Precio final: $${(precio*(1-desc)).toFixed(2)}`;}
-function A4(){let tipo=document.getElementById('A4_tipo').value.toUpperCase();let km=parseFloat(document.getElementById('A4_km').value);let personas=parseInt(document.getElementById('A4_personas').value);let tarifa=tipo=='A'?2:tipo=='B'?2.5:3;let total=tarifa*km*Math.max(personas,20);let porPersona=total/Math.max(personas,20);document.getElementById('resA4').innerText=`Costo total: $${total.toFixed(2)} – Costo por persona: $${porPersona.toFixed(2)}`;}
-function A5(){let cita=parseInt(document.getElementById('A5_cita').value);let costo=cita<=3?200:cita<=5?150:cita<=8?100:50;let acumulado=0;for(let i=1;i<=cita;i++){acumulado+=i<=3?200:i<=5?150:i<=8?100:50;}document.getElementById('resA5').innerText=`Costo cita ${cita}: $${costo} – Acumulado: $${acumulado}`;}
-function A6(){let mp=parseFloat(document.getElementById('A6_mp').value);let mano=0.75*mp;let gastos=0.35*mp;let costo=mp+mano+gastos;let precio=costo*1.45;document.getElementById('resA6').innerText=`Costo producción: $${costo.toFixed(2)} – Precio venta: $${precio.toFixed(2)}`;}
-function A7(){let credito=parseFloat(document.getElementById('A7_credito').value);let tipo=parseInt(document.getElementById('A7_tipo').value);let aumento=tipo==1?0.25:tipo==2?0.35:tipo==3?0.4:0.5;document.getElementById('resA7').innerText=`Nuevo crédito: $${(credito*(1+aumento)).toFixed(2)}`;}
-function A8(){let peso=parseFloat(document.getElementById('A8_peso').value);let zona=document.getElementById('A8_zona').value;if(peso>5){document.getElementById('resA8').innerText="Error: excede 5 kg";return;}let tarifa=zona.toLowerCase()=="europa"?60:zona.toLowerCase()=="asia"?80:50;document.getElementById('resA8').innerText=`Costo envío: $${(peso*tarifa).toFixed(2)}`;}
-function A9(){let edad=parseInt(document.getElementById('A9').value);let cat=edad<=3?"Infante":edad<=13?"Niño":edad<=17?"Adolescente":edad<=35?"Joven":edad<=64?"Adulto":"Adulto mayor";document.getElementById('resA9').innerText=cat;}
-function A10(){let n=parseInt(document.getElementById('A10').value);let dias=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];document.getElementById('resA10').innerText=n>=1&&n<=7?dias[n-1]:"Error";}
 
-// ---------- BLOQUE B ----------
-function B1(){let arr=document.getElementById('B1').value.split(',').map(Number);document.getElementById('resB1').innerHTML=arr.map(n=>n>0?`${n} es positivo`:n<0?`${n} es negativo`:`${n} es neutro`).join('<br>');}
-function B2(){let arr=document.getElementById('B2').value.split(',').map(Number);document.getElementById('resB2').innerHTML=arr.map((c,i)=>`Pedido ${i+1}: $${(c*(c>=1000?0.85:0.9)).toFixed(2)}`).join('<br>');}
-function B3(){let arr=document.getElementById('B3').value.split(',').map(Number);document.getElementById('resB3').innerHTML=arr.map((p,i)=>{let descuento=p>2500?0.15:0.08; return `Traje ${i+1}: $${(p*(1-descuento)).toFixed(2)}`;}).join('<br>');}
-function B4(){let viajes=document.getElementById('B4').value.split(';');let res=[];viajes.forEach((v,i)=>{let [tipo,km,p]=v.split(',');km=parseFloat(km);p=parseInt(p);tipo=tipo.toUpperCase();let tarifa=tipo=='A'?2:tipo=='B'?2.5:3;let total=tarifa*km*Math.max(p,20);let pp=total/Math.max(p,20);res.push(`Viaje ${i+1}: Total $${total.toFixed(2)} – Por persona $${pp.toFixed(2)}`);});document.getElementById('resB4').innerHTML=res.join('<br>');}
-function B5(){let citas=document.getElementById('B5').value.split(',').map(Number);let acumulado=0;let res=citas.map(c=>{let costo=c<=3?200:c<=5?150:c<=8?100:50;acumulado+=costo;return `Cita ${c}: $${costo} – Acumulado: $${acumulado}`;});document.getElementById('resB5').innerHTML=res.join('<br>');}
-function B6(){let items=document.getElementById('B6').value.split(',').map(Number);let res=items.map((mp,i)=>{let costo=mp+0.75*mp+0.35*mp;let pv=costo*1.45;return `Artículo ${i+1}: PV = $${pv.toFixed(2)}`;});document.getElementById('resB6').innerHTML=res.join('<br>');}
-function B7(){let clientes=document.getElementById('B7').value.split(';');let res=clientes.map((c,i)=>{let [tipo,credito]=c.split(',').map(Number);let aumento=tipo==1?0.25:tipo==2?0.35:tipo==3?0.4:0.5;return `Cliente ${i+1}: Nuevo crédito $${(credito*(1+aumento)).toFixed(2)}`;});document.getElementById('resB7').innerHTML=res.join('<br>');}
-function B8(){let paquetes=document.getElementById('B8').value.split(';');let res=paquetes.map((p,i)=>{let [peso,zona]=p.split(',');peso=parseFloat(peso);if(peso>5)return `Paquete ${i+1}: Error, excede 5 kg`;let tarifa=zona.toLowerCase()=="europa"?60:zona.toLowerCase()=="asia"?80:50;return `Paquete ${i+1}: Costo envío $${(peso*tarifa).toFixed(2)}`;});document.getElementById('resB8').innerHTML=res.join('<br>');}
-function B9(){let edades=document.getElementById('B9').value.split(',').map(Number);let res=edades.map(e=>{let cat=e<=3?"Infante":e<=13?"Niño":e<=17?"Adolescente":e<=35?"Joven":e<=64?"Adulto":"Adulto mayor";return `${e} → ${cat}`;});document.getElementById('resB9').innerHTML=res.join('<br>');}
-function B10(){let nums=document.getElementById('B10').value.split(',').map(Number);let dias=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];let res=nums.map(n=>n>=1&&n<=7?`${n} → ${dias[n-1]}`:`${n} → Error`);document.getElementById('resB10').innerHTML=res.join('<br>');}
+// BLOQUE A – Condicionales (1-10)
 
-// ---------- BLOQUE C ----------
-function C1(){let arr=document.getElementById('C1').value.split(',').map(Number);document.getElementById('resC1').innerHTML=arr.map(n=>n>0?`${n} es positivo`:n<0?`${n} es negativo`:`${n} es neutro`).join('<br>');}
-function C2(){let arr=document.getElementById('C2').value.split(',').map(Number);document.getElementById('resC2').innerHTML=arr.map((c,i)=>`Pedido ${i+1}: $${(c*(c>=1000?0.85:0.9)).toFixed(2)}`).join('<br>');}
-function C3(){let arr=document.getElementById('C3').value.split(',').map(Number);document.getElementById('resC3').innerHTML=arr.map((p,i)=>{let descuento=p>2500?0.15:0.08;return `Traje ${i+1}: $${(p*(1-descuento)).toFixed(2)}`;}).join('<br>');}
-function C4(){let viajes=document.getElementById('C4').value.split(';');let res=viajes.map((v,i)=>{let [tipo,km,p]=v.split(',');km=parseFloat(km);p=parseInt(p);tipo=tipo.toUpperCase();let tarifa=tipo=='A'?2:tipo=='B'?2.5:3;let total=tarifa*km*Math.max(p,20);let porPersona=total/Math.max(p,20);return `Viaje ${i+1}: Costo total $${total.toFixed(2)} – Costo por persona $${porPersona.toFixed(2)}`;});document.getElementById('resC4').innerHTML=res.join('<br>');}
-function C5(){let citas=document.getElementById('C5').value.split(',').map(Number);let acumulado=0;let res=citas.map(c=>{let costo=c<=3?200:c<=5?150:c<=8?100:50;acumulado+=costo;return `Cita ${c}: $${costo} – Acumulado: $${acumulado}`;});document.getElementById('resC5').innerHTML=res.join('<br>');}
-function C6(){let arr=document.getElementById('C6').value.split(',').map(Number);let res=arr.map((mp,i)=>{let costo=mp+0.75*mp+0.35*mp;let pv=costo*1.45;return `Artículo ${i+1}: PV = $${pv.toFixed(2)}`;});document.getElementById('resC6').innerHTML=res.join('<br>');}
-function C7(){let clientes=document.getElementById('C7').value.split(';');let res=clientes.map((c,i)=>{let [tipo,credito]=c.split(',').map(Number);let aumento=tipo==1?0.25:tipo==2?0.35:tipo==3?0.4:0.5;return `Cliente ${i+1}: Nuevo crédito $${(credito*(1+aumento)).toFixed(2)}`;});document.getElementById('resC7').innerHTML=res.join('<br>');}
-function C8(){let paquetes=document.getElementById('C8').value.split(';');let res=paquetes.map((p,i)=>{let [peso,zona]=p.split(',');peso=parseFloat(peso);if(peso>5)return `Paquete ${i+1}: Error, excede 5 kg`;let tarifa=zona.toLowerCase()=="europa"?60:zona.toLowerCase()=="asia"?80:50;return `Paquete ${i+1}: Costo envío $${(peso*tarifa).toFixed(2)}`;});document.getElementById('resC8').innerHTML=res.join('<br>');}
-function C9(){let edades=document.getElementById('C9').value.split(',').map(Number);let res=edades.map(e=>{let cat=e<=3?"Infante":e<=13?"Niño":e<=17?"Adolescente":e<=35?"Joven":e<=64?"Adulto":"Adulto mayor";return `${e} → ${cat}`;});document.getElementById('resC9').innerHTML=res.join('<br>');}
-function C10(){let nums=document.getElementById('C10').value.split(',').map(Number);let dias=["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];let res=nums.map(n=>n>=1&&n<=7?`${n} → ${dias[n-1]}`:`${n} → Error`);document.getElementById('resC10').innerHTML=res.join('<br>');}
+function ejercicio1() {
+  let n = parseInt(document.getElementById("A1").value);
+  let r = "";
+  if (n > 0) r = n + " es positivo";
+  else if (n < 0) r = n + " es negativo";
+  else r = "El número es cero";
+  document.getElementById("resA1").innerText = r;
+}
 
+function ejercicio2() {
+  let c = parseInt(document.getElementById("A2").value);
+  let total = 0;
+  if (c >= 1000) total = c * 0.85;
+  else total = c * 0.90;
+  document.getElementById("resA2").innerText = "Total: $" + total;
+}
+
+function ejercicio3() {
+  let p = parseFloat(document.getElementById("A3").value);
+  let d = 0;
+  if (p > 2500) d = 0.15;
+  else d = 0.08;
+  let total = p - (p * d);
+  document.getElementById("resA3").innerText = "Precio final: $" + total;
+}
+
+function ejercicio4() {
+  let tipo = document.getElementById("A4_tipo").value.toUpperCase();
+  let km = parseFloat(document.getElementById("A4_km").value);
+  let personas = parseInt(document.getElementById("A4_personas").value);
+  let tarifa = 0;
+  if (tipo == "A") tarifa = 2;
+  else if (tipo == "B") tarifa = 2.5;
+  else tarifa = 3;
+  let min = Math.max(personas, 20);
+  let total = tarifa * km * min;
+  document.getElementById("resA4").innerText = "Total: $" + total + " | Por persona: $" + (total/min);
+}
+
+function ejercicio5() {
+  let cita = parseInt(document.getElementById("A5").value);
+  let costo = 0;
+  if (cita <= 3) costo = 200;
+  else if (cita <= 5) costo = 150;
+  else if (cita <= 8) costo = 100;
+  else costo = 50;
+  document.getElementById("resA5").innerText = "Costo cita " + cita + ": $" + costo;
+}
+
+function ejercicio6() {
+  let mp = parseFloat(document.getElementById("A6").value);
+  let mano = mp * 0.75;
+  let gastos = mp * 0.35;
+  let costo = mp + mano + gastos;
+  let precio = costo * 1.45;
+  document.getElementById("resA6").innerText = "Precio venta: $" + precio;
+}
+
+function ejercicio7() {
+  let c = parseFloat(document.getElementById("A7_credito").value);
+  let tipo = parseInt(document.getElementById("A7_tipo").value);
+  let aum = 0;
+  if (tipo == 1) aum = 0.25;
+  else if (tipo == 2) aum = 0.35;
+  else if (tipo == 3) aum = 0.40;
+  else aum = 0.50;
+  let nuevo = c + (c * aum);
+  document.getElementById("resA7").innerText = "Nuevo crédito: $" + nuevo;
+}
+
+function ejercicio8() {
+  let peso = parseFloat(document.getElementById("A8_peso").value);
+  let zona = document.getElementById("A8_zona").value.toLowerCase();
+  if (peso > 5) {
+    document.getElementById("resA8").innerText = "Error: excede 5kg";
+    return;
+  }
+  let tarifa = 50;
+  if (zona == "europa") tarifa = 60;
+  else if (zona == "asia") tarifa = 80;
+  let total = peso * tarifa;
+  document.getElementById("resA8").innerText = "Costo envío: $" + total;
+}
+
+function ejercicio9() {
+  let e = parseInt(document.getElementById("A9").value);
+  let cat = "";
+  if (e <= 3) cat = "Infante";
+  else if (e <= 13) cat = "Niño";
+  else if (e <= 17) cat = "Adolescente";
+  else if (e <= 35) cat = "Joven";
+  else if (e <= 64) cat = "Adulto";
+  else cat = "Adulto mayor";
+  document.getElementById("resA9").innerText = cat;
+}
+
+function ejercicio10() {
+  let n = parseInt(document.getElementById("A10").value);
+  let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+  if (n >= 1 && n <= 7) {
+    document.getElementById("resA10").innerText = dias[n-1];
+  } else {
+    document.getElementById("resA10").innerText = "Número inválido";
+  }
+}
+
+
+// BLOQUE B – Ciclos (11-20)
+
+function ejercicio11() {
+  let arr = document.getElementById("B1").value.split(",");
+  let r = "";
+  for (let i=0; i<arr.length; i++) {
+    let n = parseInt(arr[i]);
+    if (n > 0) r += n + " es positivo\n";
+    else if (n < 0) r += n + " es negativo\n";
+    else r += n + " es neutro\n";
+  }
+  document.getElementById("resB1").innerText = r;
+}
+
+function ejercicio12() {
+  let arr = document.getElementById("B2").value.split(",");
+  let r = "";
+  for (let i=0; i<arr.length; i++) {
+    let c = parseInt(arr[i]);
+    let total = 0;
+    if (c >= 1000) total = c * 0.85;
+    else total = c * 0.90;
+    r += "Compra " + (i+1) + ": $" + total + "\n";
+  }
+  document.getElementByid("resB2").innerText = r ;
+}
+
+    function ejercicio13() {
+  let arr = document.getElementById("B3").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let precio = parseFloat(arr[i]);
+    let d = (precio > 2500) ? 0.15 : 0.08;
+    let total = precio - (precio * d);
+    r += "Traje " + (i + 1) + ": $" + total + "\n";
+  }
+  document.getElementById("resB3").innerText = r;
+}
+
+function ejercicio14() {
+  let datos = document.getElementById("B4").value.split(";");
+  let r = "";
+  for (let i = 0; i < datos.length; i++) {
+    let d = datos[i].split(",");
+    let tipo = d[0].toUpperCase();
+    let km = parseFloat(d[1]);
+    let personas = parseInt(d[2]);
+    let tarifa = (tipo == "A") ? 2 : (tipo == "B") ? 2.5 : 3;
+    let min = Math.max(personas, 20);
+    let total = tarifa * km * min;
+    r += "Viaje " + (i + 1) + ": $" + total + "\n";
+  }
+  document.getElementById("resB4").innerText = r;
+}
+
+function ejercicio15() {
+  let arr = document.getElementById("B5").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let cita = parseInt(arr[i]);
+    let costo = 0;
+    if (cita <= 3) costo = 200;
+    else if (cita <= 5) costo = 150;
+    else if (cita <= 8) costo = 100;
+    else costo = 50;
+    r += "Paciente " + (i + 1) + ": $" + costo + "\n";
+  }
+  document.getElementById("resB5").innerText = r;
+}
+
+function ejercicio16() {
+  let arr = document.getElementById("B6").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let mp = parseFloat(arr[i]);
+    let mano = mp * 0.75;
+    let gastos = mp * 0.35;
+    let costo = mp + mano + gastos;
+    let precio = costo * 1.45;
+    r += "Artículo " + (i + 1) + ": $" + precio + "\n";
+  }
+  document.getElementById("resB6").innerText = r;
+}
+
+function ejercicio17() {
+  let arr = document.getElementById("B7").value.split(";");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let d = arr[i].split(",");
+    let tipo = parseInt(d[0]);
+    let c = parseFloat(d[1]);
+    let aum = (tipo == 1) ? 0.25 : (tipo == 2) ? 0.35 : (tipo == 3) ? 0.40 : 0.50;
+    let nuevo = c + (c * aum);
+    r += "Cliente " + (i + 1) + ": $" + nuevo + "\n";
+  }
+  document.getElementById("resB7").innerText = r;
+}
+
+function ejercicio18() {
+  let arr = document.getElementById("B8").value.split(";");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let d = arr[i].split(",");
+    let peso = parseFloat(d[0]);
+    let zona = d[1].toLowerCase();
+    if (peso > 5) {
+      r += "Paquete " + (i + 1) + ": Error (más de 5kg)\n";
+    } else {
+      let tarifa = 50;
+      if (zona == "europa") tarifa = 60;
+      else if (zona == "asia") tarifa = 80;
+      let total = peso * tarifa;
+      r += "Paquete " + (i + 1) + ": $" + total + "\n";
+    }
+  }
+  document.getElementById("resB8").innerText = r;
+}
+
+function ejercicio19() {
+  let arr = document.getElementById("B9").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let e = parseInt(arr[i]);
+    let cat = "";
+    if (e <= 3) cat = "Infante";
+    else if (e <= 13) cat = "Niño";
+    else if (e <= 17) cat = "Adolescente";
+    else if (e <= 35) cat = "Joven";
+    else if (e <= 64) cat = "Adulto";
+    else cat = "Adulto mayor";
+    r += "Edad " + e + ": " + cat + "\n";
+  }
+  document.getElementById("resB9").innerText = r;
+}
+
+function ejercicio20() {
+  let arr = document.getElementById("B10").value.split(",");
+  let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let n = parseInt(arr[i]);
+    if (n >= 1 && n <= 7) r += dias[n-1] + "\n";
+    else r += "Número inválido: " + n + "\n";
+  }
+  document.getElementById("resB10").innerText = r;
+}
+
+// ===============================
+// BLOQUE C – Arreglos (21-30)
+// ===============================
+
+function ejercicio21() {
+  let arr = document.getElementById("C1").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let n = parseInt(arr[i]);
+    if (n > 0) r += n + " es positivo\n";
+    else if (n < 0) r += n + " es negativo\n";
+    else r += n + " es neutro\n";
+  }
+  document.getElementById("resC1").innerText = r;
+}
+
+function ejercicio22() {
+  let arr = document.getElementById("C2").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let c = parseInt(arr[i]);
+    let total = (c >= 1000) ? c * 0.85 : c * 0.90;
+    r += "Pedido " + (i + 1) + ": $" + total + "\n";
+  }
+  document.getElementById("resC2").innerText = r;
+}
+
+function ejercicio23() {
+  let arr = document.getElementById("C3").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let precio = parseFloat(arr[i]);
+    let d = (precio > 2500) ? 0.15 : 0.08;
+    let total = precio - (precio * d);
+    r += "Traje " + (i + 1) + ": $" + total + "\n";
+  }
+  document.getElementById("resC3").innerText = r;
+}
+
+function ejercicio24() {
+  let datos = document.getElementById("C4").value.split(";");
+  let r = "";
+  for (let i = 0; i < datos.length; i++) {
+    let d = datos[i].split(",");
+    let tipo = d[0].toUpperCase();
+    let km = parseFloat(d[1]);
+    let personas = parseInt(d[2]);
+    let tarifa = (tipo == "A") ? 2 : (tipo == "B") ? 2.5 : 3;
+    let min = Math.max(personas, 20);
+    let total = tarifa * km * min;
+    r += "Viaje " + (i + 1) + ": $" + total + "\n";
+  }
+  document.getElementById("resC4").innerText = r;
+}
+
+function ejercicio25() {
+  let arr = document.getElementById("C5").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let cita = parseInt(arr[i]);
+    let costo = 0;
+    if (cita <= 3) costo = 200;
+    else if (cita <= 5) costo = 150;
+    else if (cita <= 8) costo = 100;
+    else costo = 50;
+    r += "Paciente " + (i + 1) + ": $" + costo + "\n";
+  }
+  document.getElementById("resC5").innerText = r;
+}
+
+function ejercicio26() {
+  let arr = document.getElementById("C6").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let mp = parseFloat(arr[i]);
+    let mano = mp * 0.75;
+    let gastos = mp * 0.35;
+    let costo = mp + mano + gastos;
+    let precio = costo * 1.45;
+    r += "Artículo " + (i + 1) + ": $" + precio + "\n";
+  }
+  document.getElementById("resC6").innerText = r;
+}
+
+function ejercicio27() {
+  let arr = document.getElementById("C7").value.split(";");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let d = arr[i].split(",");
+    let tipo = parseInt(d[0]);
+    let c = parseFloat(d[1]);
+    let aum = (tipo == 1) ? 0.25 : (tipo == 2) ? 0.35 : (tipo == 3) ? 0.40 : 0.50;
+    let nuevo = c + (c * aum);
+    r += "Cliente " + (i + 1) + ": $" + nuevo + "\n";
+  }
+  document.getElementById("resC7").innerText = r;
+}
+
+function ejercicio28() {
+  let arr = document.getElementById("C8").value.split(";");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let d = arr[i].split(",");
+    let peso = parseFloat(d[0]);
+    let zona = d[1].toLowerCase();
+    if (peso > 5) {
+      r += "Paquete " + (i + 1) + ": Error (más de 5kg)\n";
+    } else {
+      let tarifa = 50;
+      if (zona == "europa") tarifa = 60;
+      else if (zona == "asia") tarifa = 80;
+      let total = peso * tarifa;
+      r += "Paquete " + (i + 1) + ": $" + total + "\n";
+    }
+  }
+  document.getElementById("resC8").innerText = r;
+}
+
+function ejercicio29() {
+  let arr = document.getElementById("C9").value.split(",");
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let e = parseInt(arr[i]);
+    let cat = "";
+    if (e <= 3) cat = "Infante";
+    else if (e <= 13) cat = "Niño";
+    else if (e <= 17) cat = "Adolescente";
+    else if (e <= 35) cat = "Joven";
+    else if (e <= 64) cat = "Adulto";
+    else cat = "Adulto mayor";
+    r += "Edad " + e + ": " + cat + "\n";
+  }
+  document.getElementById("resC9").innerText = r;
+}
+
+function ejercicio30() {
+  let arr = document.getElementById("C10").value.split(",");
+  let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
+  let r = "";
+  for (let i = 0; i < arr.length; i++) {
+    let n = parseInt(arr[i]);
+    if (n >= 1 && n <= 7) r += dias[n-1] + "\n";
+    else r += "Número inválido: " + n + "\n";
+  }
+  document.getElementById("resC10").innerText = r;
+}
 </script>
-</body>
-</html>
+
